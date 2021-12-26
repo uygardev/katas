@@ -15,10 +15,14 @@
 //   return y
 // }
 
+// function gcd(x, y) {
+//   var remainder = x % y;
+//   [x, y] = [y, remainder];
+//   return (remainder != 0) ? gcd(x, y) : x
+// }
+
 function gcd(x, y) {
-  var remainder = x % y;
-  [x, y] = [y, remainder];
-  return (remainder != 0) ? gcd(x, y) : x
+  return (y == 0) ? x : gcd(y, x % y)
 }
 
 var lcm = (...numbers) => {
