@@ -3,10 +3,10 @@
 function lastDigit(as) {
   if (as.length === 0) return 1
   let result = as.reverse().reduce((x, y) => {
-    console.log(`${y}^${x}`)
-    return Math.pow(y % 100, (x % 4)+4)
+    if (x === 0 && y === 0) return 1
+    return Math.pow(y % 100, (x % 4)+4 )
   })
-  return (result % 10).toString()
+  return (result % 10)
 }
 
 
